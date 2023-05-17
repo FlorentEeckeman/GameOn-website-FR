@@ -34,6 +34,11 @@ function launchModal() {
 function closeModal() {
   modalbg.style.display = "none";
 }
+//add max value to input date for only 18 years old players
+var input = document.getElementById("birthdate");
+input.max = new Date(new Date().setFullYear(new Date().getFullYear() - 18))
+  .toISOString()
+  .slice(0, 10);
 
 // function for collect form datas
 function getValue() {
